@@ -13,7 +13,7 @@
                             <div class="mb-3">
                                 <label  class="form-label">Name</label>
                                 <input type="text" name="name" class="form-control @error('name')
-                                is-invalid @enderror " value="{{ $employee->name}}">
+                                is-invalid @enderror " value="{{ old('name',$employee->name) }}">
                                 @error('name')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -21,7 +21,7 @@
                             <div class="mb-3">
                                 <label  class="form-label">Position</label>
                                 <input type="director" name="position" class="form-control @error('position')
-                                is-invalid @enderror " value="{{ $employee->position}}">
+                                is-invalid @enderror " value="{{ old('position',$employee->position) }}">
                                 @error('position')
                                 <div class="text-danger">{{ $message }}</div>
                                  @enderror
@@ -29,7 +29,7 @@
                             <div class="mb-3">
                                 <label  class="form-label">Department</label>
                                 <input type="year" name="department" class="form-control @error('department')
-                                is-invalid @enderror " value="{{ $employee->department }}">
+                                is-invalid @enderror " value="{{ old('department',$employee->department) }}">
                                 @error('department')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
@@ -37,7 +37,7 @@
                             <div class="mb-3">
                                 <label  class="form-label">Salary</label>
                                 <input type="salary" name="salary" class="form-control @error('salary')
-                                is-invalid @enderror " value="{{ $employee->salary }}">
+                                is-invalid @enderror " value="{{ old('salary',$employee->salary) }}">
                                 @error('salary')
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
